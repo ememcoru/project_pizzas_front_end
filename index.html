@@ -8,7 +8,7 @@
     <title>Pizzeria Pizze il Napolitano</title>
     <meta name="description"
         content="Descubrí las pizzas más ricas de San Martin que esta en la Provincia de Buenos Aires. Masa artesanal, ingredientes frescos y sabores únicos que conquistarán tu paladar. ¡Pedí ya y disfrutá en casa!">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- fuentes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
- 
+
 
 
 </head>
@@ -61,9 +61,13 @@
         <h2 class="animate__animated animate__backInLeft"> NUESTRAS PIZZAS </h2>
         <!-- https://fontawesome.com/search?ic=free -->
 
+        <!-- carrito -->
         <div id="cart">
+            <div id="subtotal">
+                <p>Total: $<span id="total-amount">0</span></p>
+            </div>
             <!-- https://fontawesome.com/search?ic=free -->
-            <i class="fa badge" id="badge" value=0><i class="fa-solid fa-cart-shopping fa-lg"></i></i>
+            <i class="fa badge" id="badge" value="0"><i class="fa-solid fa-cart-shopping fa-lg"></i></i>
         </div>
 
         <!-- cards --- cada li sera una card (son 6) -->
@@ -79,13 +83,14 @@
                             <time>23/06/2025</time>
                         </figcaption>
                     </figure>
-                    <button class="button" value="1"> Añadir al carrito <i class="fa-solid fa-cart-shopping"> </i> </button>
+                    <button class="button" value="1" data-price="25900"> Añadir al carrito <i
+                            class="fa-solid fa-cart-shopping"> </i></button>
 
                 </div>
             </li>
 
             <!-- carta 2 -->
-              <li>
+            <li>
                 <div class="box">
                     <figure>
                         <img src="img/fugazzeta_cleanup.jpg" alt="imagen de una pizza de fugasseta" class="img-pizzas">
@@ -95,12 +100,13 @@
                             <time>23/06/2025</time>
                         </figcaption>
                     </figure>
-                    <button class="button" value="2"> Añadir al carrito <i class="fa-solid fa-cart-shopping"> </i> </button>
+                    <button class="button" value="2" data-price="22500"> Añadir al carrito <i
+                            class="fa-solid fa-cart-shopping"> </i></button>
                 </div>
             </li>
 
-             <!-- carta 3 -->
-              <li>
+            <!-- carta 3 -->
+            <li>
                 <div class="box">
                     <figure>
                         <img src="img/pizza-de-albahaca.jpg" alt="imagen de una pizza de fugasseta" class="img-pizzas">
@@ -110,88 +116,139 @@
                             <time>23/06/2025</time>
                         </figcaption>
                     </figure>
-                    <button class="button" value="3"> Añadir al carrito <i class="fa-solid fa-cart-shopping"> </i> </button>
+                    <button class="button" value="3" data-price="18000"> Añadir al carrito <i
+                            class="fa-solid fa-cart-shopping"> </i></button>
+
                 </div>
             </li>
 
-             <!-- carta 4 -->
-              <li>
+            <!-- carta 4 -->
+            <li>
                 <div class="box">
                     <figure>
                         <img src="img/pizza-napolitana.jpg" alt="imagen de una pizza de fugasseta" class="img-pizzas">
                         <figcaption>
                             <h3>Pizza de napolitana </h3>
-                            <p>$ 18000</p>
+                            <p>$ 18500</p>
                             <time>23/06/2025</time>
                         </figcaption>
                     </figure>
-                    <button class="button" value="4"> Añadir al carrito <i class="fa-solid fa-cart-shopping"> </i> </button>
+                    <button class="button" value="4" data-price="18500"> Añadir al carrito <i
+                            class="fa-solid fa-cart-shopping"> </i></button>
                 </div>
             </li>
-            <LI>
-                
+
             <!-- carta 5 -->
-        
+            <li>
                 <div class="box">
                     <figure>
                         <img src="img/pizza-muzzarella.jpg" alt="imagen de una pizza-muzzarella" class="img-pizzas">
                         <figcaption>
                             <h3>Pizza de muzza </h3>
-                            <p>15000</p>
-                            <time >27/06/2025</time>
+                            <p>$ 15000</p>
+                            <time>27/06/2025</time>
                         </figcaption>
                     </figure>
-                      <button class="button" value="5"> Añadir al carrito <i class="fa-solid fa-cart-shopping"> </i> </button
+                    <button class="button" value="5" data-price="15000"> Añadir al carrito <i
+                            class="fa-solid fa-cart-shopping"> </i></button>
                 </div>
-            </LI>
-         <!-- carta 6 -->
-            <LI>
+            </li>
+            <!-- carta 6 -->
+            <li>
                 <div class="box">
                     <figure>
-                        <img src="img/pizza-rucula-y-jamon-crudo.jpg" alt="imagen de una pizza-rucula-y-jamon-crudo" class="img-pizzas">
+                        <img src="img/pizza-rucula-y-jamon-crudo.jpg" alt="imagen de una pizza-rucula-y-jamon-crudo"
+                            class="img-pizzas">
                         <figcaption>
-                            <h3>Pizza de rucula y jamon </h3>
-                            <p>20000</p>
-                            <time >27/06/2025</time>
+                            <h3>Pizza de rúcula y jamón </h3>
+                            <p>$ 20000</p>
+                            <time>27/06/2025</time>
                         </figcaption>
                     </figure>
-                       <button class="button" value="6"> Añadir al carrito <i class="fa-solid fa-cart-shopping"> </i> </button
-                </div
-            </LI>
+                    <button class="button" value="6" data-price="20000"> Añadir al carrito <i
+                            class="fa-solid fa-cart-shopping"> </i></button>
+                </div>
+            </li>
         </ul>
     </div>
 
     <footer>
-   <div class="footer-content">
-   <div class="footer-nav">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Nosotros</a></li>
-          <li><a href="#">Sucursales & Delivery</a></li>
-          <li><a href="#">Contacto</a></li>
-          <li><a href="#">Política de Privacidad</a></li>
-        </ul>
-  </div>
-     <!-- Redes sociales -->
-      <div class="footer-social" id="social">
-        <a href="https://www.facebook.com/user"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://x.com/user"></a><i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com/user"></a><i class="fab fa-instagram"></i></a>
-      </div>
-  
-    <div class="footer-copyright">
-     <p>&copy; 
-       <script> 
-       let currentYear= new Date().getFullYear();
-       document.write(currentYear);
-            
-       </script> Mi Sitio Web. Todos los derechos reservados.</p>
-       </div>
-  
+        <div class="footer-content">
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Sucursales & Delivery</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                </ul>
+            </div>
+            <!-- Redes sociales -->
+            <div class="footer-social" id="social">
+                <a href="https://www.facebook.com/user"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/user"></a><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/user"></a><i class="fab fa-instagram"></i></a>
+            </div>
 
+            <div class="footer-copyright">
+                <p>&copy;
+                    <script>
+                        let currentYear = new Date().getFullYear();
+                        document.write(currentYear);
 
- </div>
+                    </script> Mi Sitio Web. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
     </footer>
+
+    <!-- script en JS -->
+    <script>
+
+        //
+        const countButtons = document.querySelectorAll("button").length;
+        let products = [];  //arreglo para  guardar las pizzas seleccionadas (carrito)
+        let totalPrice = 0;
+
+
+        //bucle para  recorrer los botones clickeados
+        for (let i = 0; i < countButtons; i++) {
+
+            document.querySelectorAll("button")[i].addEventListener("click", showValue);
+
+        }
+
+
+        //funcion para mostrar valores en el carrito de compra en caso que se haya hecho click
+        function showValue() {
+
+            if (products.includes(this.value)) {
+                // si el producto ya esta en el arreglo, no tendria que seleeccionar el mismo producto
+                return;
+            } else {
+                //si hace click cuando una pizza no esta en el carrito
+                // se hizo click sobre el boton para comprar una pizza
+                // Cambiar color a Rojo
+                this.style.backgroundColor = "#e50c39";
+                this.innerHTML = `Agregado <i class="fa-solid fa-cart-shopping"></i>`;
+
+                products.push(this.value);   // push agrega al final de la lista un elemento
+                console.log(products);
+                document.getElementById("badge").setAttribute("value", products.length);
+            }
+
+            let price = parseFloat(this.getAttribute("data-price"));
+            totalPrice = totalPrice + price;
+            console.log("Total : " + totalPrice);
+
+            //mostrar subtotal
+            document.getElementById("subtotal").style.display="block";
+            
+            //poner el precio en  totalPrince almacena el valor total de la compra
+            document.getElementById("total-amount").textContent=totalPrice;
+        
+        }
+    </script>
 
 </body>
 

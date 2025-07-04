@@ -64,6 +64,7 @@ font-family: 'Oswald', sans-serif;
   justify-content: end;
 }
 
+/* reglas para  badge  */
 .badge:after {
   font-family: "Oswald", sans-serif;
   font-size: 0.75rem;
@@ -77,8 +78,9 @@ font-family: 'Oswald', sans-serif;
   left: -8px;
   top: -10px;
   opacity: 0.9;
-
 }
+
+
 
 /* reglas de estilo para el conjunto de tarjetas */
 .gallery {
@@ -276,6 +278,7 @@ font-size: 1rem;
 
 }
 
+
 @media (max-width: 960px) {
    #header-container {
     flex-direction: column;
@@ -299,4 +302,13 @@ font-size: 1rem;
     /* Imagenes responsivas */
     height: auto;
   }
+}
+
+#subtotal{
+ display: none;
+ font-family: "Oswald", sans-serif;
+ color: #e74c3c;
+ font-weight: bold;
+ padding:0px 5px;
+ 
 }
