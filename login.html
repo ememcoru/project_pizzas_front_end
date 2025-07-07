@@ -6,42 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <!-- script para validar login-->
-    <script>
-        const username=document.getElementById("username");
-        const password= document.getElementById("password");
-        const btn=document.getElementById("login");
-        const errorMessages = document.getElementById("errorMessages");
-        
-        //funcion para mostrar mensajes
-        function displayError(message) {
-            errorMessages.innerHTML=message;
-        }
-        
-        btn.addEventListener("click", (e)=>{
-            e.preventDefault();
-            const passValue=document.getElementById("password").value; //hacemos referencia a lo que esta dentro del control password
-           
-            // si el password tiene menos de 6 letras no envia datos y muestra error
-            if(passValue.length<6){
-                e.preventDefault();
-                displayError("La contraseña debe tener como minimo 6 caracteres de longitud");
-            }
-
-        
-        });
-
-    </script>
-
     <!-- link a bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 
-
     <!-- CSS -->
     <link rel="stylesheet" href="css/login.css">
-
-
 
 </head>
 
@@ -75,5 +45,71 @@
 
 
 </body>
+
+<!-- script para validar login va abajo de body -->
+<script>
+    const username = document.getElementById("username");
+    const password = document.getElementById("password");
+    const btn = document.getElementById("login");
+    const errorMessages = document.getElementById("errorMessages");
+    
+
+    //funcion para mostrar mensajes
+    function displayError(message) {
+        errorMessages.innerHTML = message;
+    }
+/*
+    btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const passValue = document.getElementById("password").value; //hacemos referencia a lo que esta dentro del control password
+
+        // si el password tiene menos de 6 letras no envia datos y muestra error
+        if (passValue.length < 6) {
+            e.preventDefault();
+            displayError("La contraseña debe tener como minimo 6 caracteres de longitud");
+        }
+
+        const userValue = document.getElementById("username").value;
+        if ( (userValue == "") || (passValue == "")) {
+            e.preventDefault();
+            displayError("Todos los campos son requeridos");
+
+        }
+
+    });*/
+
+    btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            const passValue = document.getElementById("password").value;
+            const userValue = document.getElementById("username").value;
+            
+            //data objeto  guarda uservalue y passvalue
+             const data={
+               username: userValue,
+               password: passValue
+            }
+            
+            console.log(data);
+           // Object {username: 'Carlos', password: '123456'}
+           // JSON {"username": "Carlos", "password": "123456"} <-- par valor
+
+        console.log(JSON.stringify(data));
+        //{"username":"jose","password":"123456"}
+        
+            if (passValue.length < 6) {
+                e.preventDefault();
+                displayError("La contraseña debe tener como minimo 6 caracteres de longitud.");
+            }
+            if ((userValue == "") || (passValue == "")) {
+                e.preventDefault();
+                displayError("Todos los campos son requeridos.");
+            }
+
+        });
+
+
+
+</script>
+
 
 </html>
