@@ -26,10 +26,10 @@ Aplicación web que presenta un catálogo de pizzas con funcionalidad de carrito
 
 ## Autor
 
-- [@Emilia Corbetta](htpps://www.github.com/ememcoru)
+- [@Emilia Corbetta] (https://www.github.com/ememcoru/)
 
 ## Licencia
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT] (https://choosealicense.com/licenses/mit/)
 
 
